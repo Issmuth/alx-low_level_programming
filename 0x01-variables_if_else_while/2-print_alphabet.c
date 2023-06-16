@@ -7,11 +7,11 @@
  */
 int main()
 {
-	int a = 65;
+	int a = 49;
 
-	while (a < 92)
+	while (a < 75)
 	{
-		putchar('%d + '0'', a);
+		putchar(a + '0');
 		a++;
 	}
 	return (0);
