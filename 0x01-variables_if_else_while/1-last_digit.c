@@ -18,13 +18,13 @@ int main(void)
 	printf("Last digit of %d is ", n);
 	if (m > 5)
 	{
-		printf("and is greater than 5\n");
+		printf("%d and is greater than 5\n", m);
 	} else if (m == 0)
 	{
-		printf("and is 0\n");
+		printf("%d and is 0\n", m);
 	} else if (m < 6)
 	{
-		printf("and is less than 6 and not 0");
+		printf("%d and is less than 6 and not 0\n", m);
 	}
 	return (0);
 }
