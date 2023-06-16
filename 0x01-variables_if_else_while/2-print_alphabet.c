@@ -13,7 +13,7 @@ int main()
 	for (a = 65; a < 92; a++)
 	{
 		b = a + '0';
-		putchar("%c", b);
+		putchar("%d", b);
 	}
 	return (0);
 }
