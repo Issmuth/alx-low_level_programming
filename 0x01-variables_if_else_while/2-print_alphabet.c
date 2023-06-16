@@ -8,12 +8,10 @@
 int main()
 {
 	int a = 65;
-	char b;
 
 	while (a < 92)
 	{
-		b = a + '0';
-		putchar("%c", b);
+		putchar('%d + '0'', a);
 		a++;
 	}
 	return (0);
