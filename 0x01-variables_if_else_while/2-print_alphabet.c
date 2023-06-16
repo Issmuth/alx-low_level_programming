@@ -13,7 +13,7 @@ int main()
 	while (a < 92)
 	{
 		b = a + '0';
-		putchar("%d", b);
+		putchar("%c", b);
 		a++;
 	}
 	return (0);
