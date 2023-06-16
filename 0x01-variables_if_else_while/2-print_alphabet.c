@@ -5,7 +5,7 @@
  *
  * Return: Always success (0)
  */
-int main()
+int main(void)
 {
 	int a = 49;
 
