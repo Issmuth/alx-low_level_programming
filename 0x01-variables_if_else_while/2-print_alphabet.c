@@ -7,13 +7,14 @@
  */
 int main()
 {
-	int a;
+	int a = 65;
 	char b;
 
-	for (a = 65; a < 92; a++)
+	for (a < 92)
 	{
 		b = a + '0';
 		putchar("%d", b);
+		a++;
 	}
 	return (0);
 }
