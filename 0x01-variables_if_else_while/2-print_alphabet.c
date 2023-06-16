@@ -10,7 +10,7 @@ int main()
 	int a = 65;
 	char b;
 
-	for (a < 92)
+	while (a < 92)
 	{
 		b = a + '0';
 		putchar("%d", b);
