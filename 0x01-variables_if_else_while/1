@@ -1,12 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - print the alphabet in lowercase
- * excluding e and q
+ * main - prints the alphabet in lowercase
+ * except the letters e and q
  *
- * Return: 0 if successful 1 otherwise
+ * Return: o if successful 1 otherwise
  */
-
 int main(void)
 {
 	char a = 'a';
@@ -20,4 +19,4 @@ int main(void)
 	}
 	putchar('\n');
 	return (0);
-}
+}	
