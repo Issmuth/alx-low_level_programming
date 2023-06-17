@@ -8,16 +8,16 @@
 
 int main(void)
 {
-	int a = 49;
+	char a = 'a';
 	
-	while (a < 75)
+	while (a <= z)
 	{
-		if (a != 53 || a != 66)
-		{
-			putchar(a + '0');
-		} else
+		if (a == e || a == q)
 		{
 			continue;
+		} else
+		{
+			putchar(a);
 		}
 		a++;
 	}
