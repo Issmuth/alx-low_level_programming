@@ -9,13 +9,23 @@
 
 int main(void)
 {
-	int a = 0;
+	int a = 0, b = 0;
 
 	while (a + '0' <= '9')
 	{
 		putchar(a + '0');
-		putchar(',');
-		putchar(' ');
+		while (b <= a)
+		{
+			if (b == 9)
+			{
+				break;
+			} else
+			{
+				putchar(',');
+				putchar(' ');
+			}
+			b++;
+		}
 		a++;
 	}
 	putchar('\n');
