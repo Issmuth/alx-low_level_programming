@@ -3,10 +3,10 @@
 /**
  * main - prints the alphabet in lowercase
  *
- * Return: nothing
+ * Return: Always 0
  */
 
-void main(void)
+int main(void)
 {
 	int a = 49;
 
@@ -16,4 +16,5 @@ void main(void)
 		a++;
 	}
 	_putchar('\n');
+	return (0);
 }
