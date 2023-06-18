@@ -2,7 +2,7 @@
 
 /**
  * print_last_digit - extracts the last digit of a number
- * @a: number to extract las digit from
+ * @n: number to extract las digit from
  * Return: the last digit
  */
 
