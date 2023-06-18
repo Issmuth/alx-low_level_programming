@@ -3,7 +3,7 @@
 /**
  * print_alphabet_x10 - prints the alphabet int lowercase
  * ten times each on a new line
- * 
+ *
  * Return: NULL
 */
 
