@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _puts_recursion - prints a string
@@ -9,13 +10,13 @@
 
 void _puts_recursion(char *s)
 {
-	int static a = 0;
+	static int a = 0;
 
 	if (s[a] != '\0')
 	{
 		putchar(s[a]);
 		a++;
-		_puts_recusrion(*s);
+		_puts_recursion(*s);
 	}
 
 }
