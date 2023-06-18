@@ -11,17 +11,17 @@ void jack_bauer(void)
 {
 	int a,b,c,d;
 
-	for(int a=0; a<3; a++)
+	for(a = 0; a < 3; a++)
 	{
-		for (int b=0; b<10; b++)
+		for (b = 0; b < 10; b++)
 		{
-			if(a==2 && b==4){
+			if(a == 2 && b == 4){
 				break;
 			} else
 			{
-				for(int c=0; c<6; c++)
+				for(c = 0; c < 6; c++)
 				{
-					for(int d=0; d<10; d++)
+					for(d = 0; d < 10; d++)
 					{
 						putchar(a + '0');
 						putchar(b + '0');
