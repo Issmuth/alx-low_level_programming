@@ -61,7 +61,7 @@ char *_strcpy(char *dest, char *src)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *good_boy;
-	int len1, len2;
+	int puplen, ownlen;
 
 	puplen = _strlen(name);
 	ownlen = _strlen(owner);
