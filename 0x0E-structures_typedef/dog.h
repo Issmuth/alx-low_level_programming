@@ -8,15 +8,19 @@
  *
  * Description: each dog struct will store the name age and owner
  * of a single dog enity
- * dog_t - Typedef for struct dog
  */
 
-typedef dog_t struct dog
+struct dog
 {
 	char *name;
 	float age;
 	char *owner;
 };
+
+/**
+ * dog_t - Typedef for struct dog
+ */
+typedef struct dog;
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
 #endif
