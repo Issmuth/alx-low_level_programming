@@ -1,3 +1,5 @@
+#ifndef DOG_H
+#define DOG_H
 /**
  * struct dog - data type for a dog
  * @name: name of the dog
@@ -7,8 +9,7 @@
  * Description: each dog struct will store the name age and owner
  * of a single dog enity
  */
-#ifndef DOG_H
-#define DOG_H
+
 struct dog
 {
 	char *name;
