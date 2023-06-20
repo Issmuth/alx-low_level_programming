@@ -8,6 +8,7 @@
  *
  * Description: each dog struct will store the name age and owner
  * of a single dog enity
+ * dog_t - Typedef for struct dog
  */
 
 typedef dog_t struct dog
