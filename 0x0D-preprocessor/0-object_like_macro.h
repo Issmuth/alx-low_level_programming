@@ -1,3 +1,2 @@
-#ifndef SIZE 
+#pragma once
 #define SIZE 1024
-#endif // #ifndef SIZE
