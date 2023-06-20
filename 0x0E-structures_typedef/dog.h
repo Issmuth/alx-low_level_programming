@@ -7,10 +7,12 @@
  * Description: each dog struct will store the name age and owner
  * of a single dog enity
  */
-
+#ifndef DOG_H
+#define DOG_H
 struct dog
 {
 	char *name;
 	float age;
 	char *owner;
 };
+#endif
