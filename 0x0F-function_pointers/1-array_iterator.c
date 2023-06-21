@@ -1,6 +1,5 @@
 #include "function_pointers.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
  * array_itereator - executes a function on
