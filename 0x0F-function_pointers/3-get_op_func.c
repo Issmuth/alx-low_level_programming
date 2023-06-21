@@ -3,7 +3,7 @@
 /**
  * get_op_func - selects the correct operation function
  * @s: operator passed as argument
- * Return: pointer to a function of 
+ * Return: pointer to a function of
  * the selected operation function
  */
 
@@ -24,7 +24,7 @@ int (*get_op_func(char *s))(int, int)
 	{
 		if (strcmp(ops[i].op, s) == 0)
 		{
-			return(ops->f);
+			return (ops->f);
 		}
 		i++;
 	}
