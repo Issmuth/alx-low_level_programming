@@ -1,5 +1,6 @@
 #include "function_pointers.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * array_itereator - executes a function on
@@ -12,12 +13,9 @@
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	int i;
-	
-	if (action != NULL && array != NULL)
+
 	for(i=0; i<size; i++)
 	{
 		action(array[i]);
 	}
-	
-	return;
 }
