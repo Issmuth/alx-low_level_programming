@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * main - prints the name of the progam
+ * @argc: argument count
+ * @argv: array of arguments passed
+ * Return: Always Success (0)
+ */
+
+int main(int argc, char *argv[])
+{
+	printf("%s", argv[0]);
+	return (0);
+}
