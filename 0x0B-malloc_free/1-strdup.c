@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * strup - returns a pointer to memory
+ * _strdup - returns a pointer to memory
  * where a copy of given string is stored
  * @str: string that is copied
  * Return: pointer of to address where
