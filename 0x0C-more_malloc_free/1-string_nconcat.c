@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 
 /**
  * string_nconcat - concactenates two strings
@@ -15,14 +14,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int len1, len2, i, j, k;
 	char *ptr;
 
-	len1 = strlen(s1);
-	len2 = strlen(s2);
-
 	if (s1 == NULL)
 		s1 = "";
 
-	if(s2 == NULL)
+	if (s2 == NULL)
 		s2 = "";
+
+	for (i = 0; s1[i] != '\0'; i++)
+		len1 = i;
+
+	for (j = 0; s2[j] != '\0'; j++)
+		len2 = j;
 
 	ptr = malloc(sizeof(char) * (len1 + len2 + 1));
 
@@ -31,16 +33,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	}
 
-	for (i = 0; i < len1; i++)
+	for (i = 0; s1[i] != '\0'; i++)
 	{
 		ptr[i] = s1[i];
 	}
+
+	k = len1 + 1;
 
 	if (n >= len2)
 	{
 		for (j = 0; s2[j] != '\0'; j++)
 		{
-			k = len1 + 1;
 			ptr[k] = s2[j];
 			k++;
 		}
@@ -48,10 +51,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{	
 		for (j = 0; j < n; j++)
 		{
-			k = len1 + 1;
 			ptr[k] = s2[j];
 			k++;
 		}
 	}
+
 	return (ptr);
 }
