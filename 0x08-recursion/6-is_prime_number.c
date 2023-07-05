@@ -14,7 +14,7 @@ int prime_check(int n, int i)
 		return (0);
 
 	if ((n % i) != 0 && i < n)
-		return (prime_check(n, (i + 1));
+		return (prime_check(n, (i + 1)));
 
 	return (1);
 }
