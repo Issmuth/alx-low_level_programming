@@ -14,12 +14,13 @@ int main(int argc, char *argv[])
 {
 	int cents, change = 0;
 
-	cents = atoi(argv[1]);
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
+
+	cents = atoi(argv[1]);
 		while (cents > 0)
 		{
 			change += 1;
