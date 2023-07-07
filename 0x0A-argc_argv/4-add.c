@@ -19,23 +19,18 @@ int main(int argc, char * argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		if (isdigit(atoi(argv[i])))
+		for (j = 0; argv[i][j]; j++)
 		{
-			continue;
-		} else
-		{
-			j++;
+			if (argv[i][j] < '0' || argv[i][j] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
+
+		sum += atoi(argv[i]);
 	}
-	if (j != 0)
-	{
-		printf("Error");
-		return (1);
-	} else
-	{
-		for (i = 1; i < argc; i++)
-			sum += atoi(argv[i]);
-	}
+
 	printf("%d\n", sum);
 	return (0);
 }
