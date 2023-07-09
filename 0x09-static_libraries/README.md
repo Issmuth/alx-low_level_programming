@@ -1,1 +1,1 @@
-static and dynamic libraries
+static libraries project
