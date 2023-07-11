@@ -8,7 +8,7 @@
  * Return: pointer to the array 
  */
 
-char *create_array(unsigned int size, char c)
+char *create_array(unsigned int size, __attribute__((unused))char c)
 {
 	char *ptr;
 
