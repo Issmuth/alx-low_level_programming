@@ -24,6 +24,6 @@ char *create_array(unsigned int size, char c)
 	for (i = 0; i < size; i++)
 		ptr[i] = c;
 
-	ptr[size - 1] = '\0';
+	ptr[size] = '\0';
 	return (ptr);
 }
