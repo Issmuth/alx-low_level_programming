@@ -32,9 +32,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	for (k = 0; k < i; k++)
 		ptr[k] = s1[k];
-	
-	if ( n < j)
-	{	
+
+	if (n < j)
+	{
 		for (k = 0; k < n; k++)
 			ptr[i++] = s2[k];
 	} else
