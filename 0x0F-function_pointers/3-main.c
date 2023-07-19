@@ -10,7 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	int (*func)(int, int);
+	int (*f)(int, int);
 	char op;
 	int a, b;
 
@@ -18,6 +18,14 @@ int main(int argc, char *argv[])
 	{
 		printf("Error\n");
 		exit(98);
+	}
+
+	f = get_op_func(argv[2]);
+
+	if (!f)
+	{
+		printf("Error\n");
+		exit(99);
 	}
 
 	a = atoi(argv[1]);
@@ -30,14 +38,6 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 
-	func = get_op_func(argv[2]);
-
-	if (func == NULL)
-	{
-		printf("Error\n");
-		exit(99);
-	}
-
-	printf("%d\n", func(a, b));
+	printf("%d\n", f(a, b));
 	return (0);
 }
