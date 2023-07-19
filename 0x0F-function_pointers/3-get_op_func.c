@@ -2,6 +2,7 @@
 
 /**
  * get_op_func - selects correct function
+ * @s: operator
  *
  * Return: pointer to the function that corresponds
  * to the operator given as a parameter
