@@ -1,4 +1,18 @@
 #include "main.h"
+/**
+ * set_zero - sets the allcoted memory to zero
+ * @membs: each memory to be set zero
+ * @ptr: pointer to the array
+ *
+ */
+
+void set_zero(unsigned int membs, char *ptr)
+{
+	unsigned int i;
+
+	for (i = 0; i < membs; i++)
+		ptr[i] = 0;
+}
 
 /**
  * _calloc - allocates memory of an array
@@ -10,19 +24,22 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *ptr;
-	unsigned int i;
+	char *ptr;
 
 	if (nmemb == 0 || size == 0)
+	{
 		return (NULL);
+	}
 
 	ptr = malloc(nmemb * size);
 
-	if ((char *) ptr == NULL)
-		return (NULL);
 
-	for (i = 0; i < nmemb; i++)
-		((char*) ptr)[i] = '\0';
+	if (ptr == NULL)
+	{
+		return (NULL);
+	}
+
+	set_zero((nmemb * size), ptr);
 
 	return (ptr);
 }
