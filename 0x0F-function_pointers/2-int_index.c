@@ -5,7 +5,7 @@
  * @array: array to search through
  * @size: size of array
  * @cmp: function that compares values
- * 
+ *
  * Return: index of the element that cmp does not return 0
  * -1 if no element is found or size <= 0
  */
