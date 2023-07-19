@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 {
 	int (*f)(int, int);
 	char op;
-	int a, b;
+	int a, b, c;
 
 	if (argc != 4)
 	{
@@ -22,22 +22,24 @@ int main(int argc, char *argv[])
 
 	f = get_op_func(argv[2]);
 
-	if (!f)
+	if (f == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
 
-	a = atoi(argv[1]);
-	b = atoi(argv[3]);
 	op = *argv[2];
 
-	if ((op == '/' || op == '%') && b == 0)
+	if ((op == '/' || op == '%') && atoi(argv[3]) == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
 
-	printf("%d\n", f(a, b));
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
+
+	c = f(a, b);
+	printf("%d\n", c);
 	return (0);
 }
