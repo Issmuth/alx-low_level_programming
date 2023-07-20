@@ -8,42 +8,33 @@
 void print_all(const char * const format, ...)
 {
 	va_list ap;
-	int i = 0, a, k = 0;
-	char b;
-	float c;
+	int i = 0, k = 0;
 	char *d;
 
 	va_start(ap, format);
-
 	while (format[i] != '\0')
-	{
 		i++;
-	}
 
 	while (k < (i + 1))
 	{
 		switch (format[k])
 		{
-			case 'i' :
-				a = va_arg(ap, int);
-				printf("%d", a);
+			case 'i':
+				printf("%d", va_arg(ap, int));
 				break;
-			case 'c' :
-				b = va_arg(ap, int);
-				printf("%c", b);
+			case 'c':
+				printf("%c", va_arg(ap, int));
 				break;
-			case 'f' :
-				c = va_arg(ap, double);
-				printf("%f", c);
+			case 'f':
+				printf("%f", va_arg(ap, double));
 				break;
-			case 's' :
+			case 's':
 				d = va_arg(ap, char *);
 				if (d == NULL)
 					d = "(nil)";
-
 				printf("%s", d);
 				break;
-			default :
+			default:
 				k++;
 				continue;
 		}
@@ -52,7 +43,6 @@ void print_all(const char * const format, ...)
 			k++;
 			continue;
 		}
-
 		printf(", ");
 		k++;
 	}
