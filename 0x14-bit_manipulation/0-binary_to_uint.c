@@ -35,7 +35,7 @@ unsigned int binary_to_uint(const char *b)
 
 	exponent = strlen(b) - 1;
 
-	if (b == NULL)
+	if (b == NULL || b == "")
 		return (0);
 
 	for (i = 0; b[i] != '\0'; i++)
