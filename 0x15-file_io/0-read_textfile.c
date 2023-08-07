@@ -33,7 +33,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	write_size = write(1, str, letters);
 
-	if (write_size == -1)
+	if (write_size == -1 || write_size != (int) letters)
 		return (0);
 
 	return (write_size);
