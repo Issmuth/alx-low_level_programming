@@ -11,7 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-	int file_from, file_to;
+	int file_from, file_to, close_count, read_from;
 	char buffer[1024];
 
 	if (argc != 3)
@@ -29,14 +29,13 @@ int main(int argc, char *argv[])
 			S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 	if (file_to < 0)
 		file_to = open(argv[2], O_WRONLY | O_APPEND);
-	if (file < 0)
+	if (file_to < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	while (!feof(file))
+	while ((read_from = read(file_from, buffer, 1024)) > 0)
 	{
-		read_from = read(file, buffer, 1024);
 		if (read_from < 0)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
@@ -48,7 +47,7 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 	}
-	close_count1 = close(file_from);
+	close_count = close(file_from);
 	if (close_count < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
