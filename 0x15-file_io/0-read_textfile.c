@@ -22,14 +22,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	file = open(filename, O_RDONLY);
-	if (file == -1)
+	if (file < 0)
 	{
 		free(str);
 		return (0);
 	}
 
 	read_size = read(file, str, letters);
-	if (read_size == -1)
+	if (read_size < 0)
 	{
 		free(str);
 		return (0);
@@ -40,7 +40,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	write_size = write(STDOUT_FILENO, str, letters);
 
-	if (write_size == -1 || write_size != read_size)
+	if (write_size < 0 || write_size != read_size)
 	{
 		free(str);
 		return (0);
