@@ -11,16 +11,16 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int file, len;
+	int file, write_count;
 	
 	if (filename == NULL)
 		return (-1);
 
-	file = open(filename, O_CREAT | O_RDWR | O_TRUNC, filepermissions);
+	file = open(filename, O_CREAT | O_RDWR | O_TRUNC, S_IRUSR | S_IWUSR);
 	if (file < 0)
 		return (-1);
 	if (text_content == NULL)
-		text_content = "";
+		text_content = "\0";
 
 	write_count = write(file, text_content, strlen(text_content));
 
