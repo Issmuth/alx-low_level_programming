@@ -23,21 +23,27 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	file = open(filename, O_RDONLY);
 	if (file == -1)
+	{
 		free(str);
 		return (0);
+	}
 
 	read_size = read(file, str, letters);
 	if (read_size == -1)
+	{
 		free(str);
 		return (0);
+	}
 
 	close(file);
 
 	write_size = write(1, str, letters);
 
 	if (write_size == -1 || write_size != read_size)
+	{
 		free(str);
 		return (0);
+	}
 
 	return (write_size);
 }
