@@ -9,28 +9,21 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int closest_int, i;
+	int i, count = 0;
+	unsigned long int shifted;
 
-	if (n == 0)
-		printf("0");
-
-	for (i = 0; n != 0; i++)
+	for (i = 63; i >= 0; i--)
 	{
-		closest_int = pow(2, closest_exp(n));
-		n = n - closest_int;
+		shifted = n >> i;
+
+		if (shifted & 1)
+		{
+			write(1, "1", 1);
+			count++;
+		}
+		else if (count)
+			write(1, "0", 1);
 	}
-}
-
-unsigned long int closet_exp(unsigned long int n)
-{
-	unsigned long int exponent = 0;
-
-	while (_pow(2, exponent) <= n)
-	{
-		if (_pow(2, exponent + 1) > n)
-
-
-		exponent++;
-	}
-	return (exponent--);
+	if (!count)
+		write(1, "0", 1);
 }
