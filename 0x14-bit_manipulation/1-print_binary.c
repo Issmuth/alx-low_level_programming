@@ -4,7 +4,6 @@
  * print_binary - prints binary form of
  * a number
  * @n: number to be converted
- * @index: 
  */
 
 void print_binary(unsigned long int n)
