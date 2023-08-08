@@ -33,11 +33,10 @@ unsigned int binary_to_uint(const char *b)
 	int exponent, i;
 	unsigned int uint = 0;
 
-	exponent = strlen(b) - 1;
-
 	if (b == NULL)
 		return (0);
 
+	exponent = strlen(b) - 1;
 	for (i = 0; b[i] != '\0'; i++)
 	{
 		if (b[i] == '1')
