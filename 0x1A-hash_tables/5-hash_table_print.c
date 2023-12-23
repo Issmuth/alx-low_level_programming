@@ -21,13 +21,12 @@ void hash_table_print(const hash_table_t *ht)
 		while (temp)
 		{
 			if (notlast)
-			{
 				printf(", ");
-			}
+
 			printf("\'%s\': \'%s\'", temp->key, temp->value);
 			temp = temp->next;
 
-			if (notlast)
+			if (notlast == 0)
 				notlast = 1;
 		}
 	}
