@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_line - prints linei
+ * print_square - prints a square
  * @n: ...
  */
 
@@ -16,6 +16,7 @@ void print_square(int size)
 	{
 		for (col = 0; col < size; col++)
 			_putchar('#');
-		_putchar('\n')
+
+		_putchar('\n');
 	}
 }
