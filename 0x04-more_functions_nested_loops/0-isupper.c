@@ -11,6 +11,7 @@ int _isupper(int c)
 {
 	int isupper = 0;
 	int asc = c;
+
 	if (asc > 64 && asc < 91)
 		isupper = 1;
 
