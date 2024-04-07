@@ -10,7 +10,7 @@
 int _isupper(int c)
 {
 	isupper = 0;
-	if (atoi(c) > 64 && atoi(c) < 91)
+	if (int(c) > 64 && int(c) < 91)
 		isupper = 1;
 
 	return (isupper);
