@@ -21,6 +21,6 @@ int main(void)
 			i = 2;
 		}
 	}
-	printf("%ld\n",num);
+	printf("%ld\n", num);
 	return (0);
 }
