@@ -9,8 +9,9 @@
 
 int _isupper(int c)
 {
-	isupper = 0;
-	if (int(c) > 64 && int(c) < 91)
+	int isupper = 0;
+	int asc = c;
+	if (asc > 64 && asc < 91)
 		isupper = 1;
 
 	return (isupper);
